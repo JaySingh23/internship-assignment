@@ -136,6 +136,9 @@ img {
     justify-content: flex-start;
     align-items: baseline;
   }
+  .services--content--right {
+    margin-left: 0;
+  }
   .row-img-left {
     flex-direction: column-reverse;
     justify-content: flex-start;
