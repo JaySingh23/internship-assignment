@@ -20,6 +20,7 @@ img {
   padding: 10px;
   padding-bottom: 40px;
   background-color: bisque;
+  min-width: none;
 }
 .row-img-right {
   display: flex;
@@ -35,7 +36,8 @@ img {
   align-items: center;
 }
 .services--img-3 {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: auto;
 }
 .services--img-4 img {
@@ -70,7 +72,7 @@ img {
   font-weight: 700;
   font-size: larger;
 }
-/********************MENU SECTION **************************/
+/********************MENU SECTION ************************************/
 #menu {
   padding-bottom: 20px;
   background-color: bisque;
@@ -102,7 +104,7 @@ img {
   font-size: large;
   font-weight: bolder;
 }
-/************************FRANCHISE SECTION*********************/
+/************************FRANCHISE SECTION**********************************/
 #franchise {
   background: url(./src/images/franchisee.jpg);
   min-height: 500px;
@@ -118,7 +120,94 @@ img {
   font-family: "Taviraj", serif;
   font-size: x-large;
   margin: auto;
-  position: absolute;
-  left: 40%;
+
+  text-align: center;
   padding-top: 30px;
+}
+/***************************RESPONSIVE PART **********************************/
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+  .row-img-right {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .row-img-left {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .services--img-1 {
+    margin: 0 auto;
+    min-width: 40%;
+  }
+  .services--img-2 {
+    margin: 0 auto;
+    min-width: 50%;
+  }
+  .services--img-3 {
+    width: 460px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .services--img-4 {
+    margin: 0 auto;
+  }
+  .services--content--right {
+    right: 50%;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .services--img-3 {
+    width: 360px;
+  }
+  #menu .thelist {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  h2 {
+    font-size: 26px;
+  }
+  #about .heading {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  h2 {
+    font-size: 25px;
+  }
+  .services--img-3 {
+    width: 300px;
+  }
+}
+/********************ONLY FOR IMAGE 3*****************************/
+@media only screen and (max-width: 313px) {
+  .services--img-3 {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 264px) {
+  .services--img-3 {
+    width: 210px;
+  }
+}
+@media only screen and (max-width: 222px) {
+  .services--img-3 {
+    width: 150px;
+  }
 }
